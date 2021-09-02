@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Edgar's Weather Dashboard </title>
+   <!-- links for bootstrap , fontawesome and google fonts -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+    
+  </head>
+
+  <body>
+    <header class="title">
+      <h1> Weather Dashboard </h1>
+    </header>
+ <section class="leftside">
+        <!--  -->
+        <div>
+          <!-- adding form here  -->
+        
+            <input type="text" placeholder="Chicago" id="search" />
+            <!-- needs to populate under this  -->
+          </p>
+          <!-- this is the button for submit -->
+          <button
+            type="button"
+            class="btn btn-primary btn-mdn"
+            id="searchbtn"
+          >
+           Search
+          </button>
+        </div>
+        <section class="citiesList">
+            
+        </section>
+      </section>
+
+
+   
+<!-- links for jquer and momentJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="Javascript/script.js"></script>
+  </body>
+</html>
