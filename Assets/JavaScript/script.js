@@ -1,14 +1,26 @@
 let $searchButton = $("#searchbtn");
 let $searchInput = $("#searchInput");
 
-function getPanelHTML(name,date,temp){
+
+// function getDayOfWeek(date) {
+//     let dayOfWeek = new Date(date).getDay();    
+//     return isNaN(dayOfWeek) ? null : 
+//       ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][dayOfWeek+1];
+//   }
+
+// template literal `can include html code
+//can pass javascript variables thru string
+function getPanelHTML(name,updateDate, weekday, temp,wind,icon){
     return `
     <div class = "col-sm-2">
         <div class= "panel panel-default">
-            <div class ="panel-heading">${name},${date}</div>
+            <div class ="panel-heading">${updateDate}</div>
+            <div class ="panel-heading">${weekday}</div>
+            <div class ="panel-heading">${name}</div>
             <div class = "panel-body">
+            <img src=" http://openweathermap.org/img/wn/${icon}@2x.png" /> 
                 <p> Temperature: ${temp} </p>
-                <p> wind </p>
+                <p> wind ${wind} mph</p>
                 <p> humidity </p>
                 <p> uv </p>
             </div>
@@ -19,11 +31,12 @@ function getPanelHTML(name,date,temp){
 }
 
 function searchButtonHandler() {
+    $("#myWeather").empty();
     let searchInput = $searchInput.val();
-    searchInput = "chicago"
+    // searchInput = "chicago"
 
     let apiKey = "b21a3a98c66a430705a9406d77dd7091";
-    let weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${searchInput}&units=imperial&exclude=minutely,hour&appid=${apiKey}`
+    let weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${searchInput}&units=imperial&exclude=minutely,hourly&appid=${apiKey}`
 
     $.ajax({
         url: weatherUrl,
@@ -36,19 +49,24 @@ function searchButtonHandler() {
                 let curr= data.list[i]
                 let currDateText= curr.dt_txt
                 let currDate = currDateText.split(" ")[0];
+                let updateDate = moment(currDate, 'YYYY/MM/DD').format('MM/DD/YYYY')
+                let weekday= moment(currDate, 'YYYY/MM/DD').format('dddd')
+
                 let name= data.city.name
+                let wind= curr.wind.speed
+                let icon= curr.weather[0].icon
 
                 if (!appendedDates.includes(currDate))
                 {
                     appendedDates.push(currDate)
                     let temp= curr.main.temp;
-                    
+                    // let weekday= getDayOfWeek(currDate);
                     
                     $("#myWeather").append(
-                        getPanelHTML(name,currDateText,temp)
+                        getPanelHTML(name,updateDate,weekday,temp,wind,icon)
                     )
                     appendedCount ++;
-                    if (appendedCount >4){
+                    if (appendedCount >5){
                         break;
                     }
 
@@ -59,5 +77,10 @@ function searchButtonHandler() {
     }
     )
 }
+
+//local storage, list of past searches
+
+
+
 
 $searchButton.click(searchButtonHandler);
