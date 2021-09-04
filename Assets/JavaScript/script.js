@@ -10,7 +10,7 @@ let $searchInput = $("#searchInput");
 
 // template literal `can include html code
 //can pass javascript variables thru string
-function getPanelHTML(name,updateDate, weekday, temp,wind,icon){
+function getPanelHTML(name,updateDate, weekday, temp,wind,humid,icon){
     return `
     <div class = "col-sm-2">
         <div class= "panel panel-default">
@@ -20,8 +20,8 @@ function getPanelHTML(name,updateDate, weekday, temp,wind,icon){
             <div class = "panel-body">
             <img src=" http://openweathermap.org/img/wn/${icon}@2x.png" /> 
                 <p> Temperature: ${temp} </p>
-                <p> wind ${wind} mph</p>
-                <p> humidity </p>
+                <p> Wind: ${wind} mph</p>
+                <p> Humidity: ${humid} % </p>
                 <p> uv </p>
             </div>
 
@@ -55,6 +55,7 @@ function searchButtonHandler() {
                 let name= data.city.name
                 let wind= curr.wind.speed
                 let icon= curr.weather[0].icon
+                let humid= curr.main.temp;
 
                 if (!appendedDates.includes(currDate))
                 {
@@ -63,7 +64,7 @@ function searchButtonHandler() {
                     // let weekday= getDayOfWeek(currDate);
                     
                     $("#myWeather").append(
-                        getPanelHTML(name,updateDate,weekday,temp,wind,icon)
+                        getPanelHTML(name,updateDate,weekday,temp,wind,humid,icon)
                     )
                     appendedCount ++;
                     if (appendedCount >5){
