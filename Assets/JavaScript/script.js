@@ -3,6 +3,7 @@ let $searchInput = $("#searchInput");
 let cityLat;
 let cityLon;
 let UVp= $("#UV");
+var uvId;
 
 // function getDayOfWeek(date) {
 //     let dayOfWeek = new Date(date).getDay();    
@@ -32,7 +33,7 @@ function getPanelHTML(name, updateDate, weekday, temp, wind, humid, icon) {
     `
 }
 
-function getPanelHTML2(name, today, temp, wind, humid, icon,UV) {
+function getPanelHTML2(name, today, temp, wind, humid, icon,uvId) {
     return `
     <div class = "col-12 col-md-8 col-xl-9">
         <div class= "panel panel-default">
@@ -44,7 +45,7 @@ function getPanelHTML2(name, today, temp, wind, humid, icon,UV) {
                 <p> Temperature: ${temp} </p>
                 <p> Wind Speed: ${wind} mph</p>
                 <p> Humidity: ${humid}% </p>
-                <p> UV Index: </p>
+                <p id="uvIdx"> UV Index: ${uvId} </p>
             </div>
 
         </div>
@@ -123,7 +124,7 @@ $.ajax({
     url: dataUrl,
     success: function (data) {
 
-        let appendedDates2 = [];
+        let appendedData = [];
         
         console.log(data)
         
@@ -137,12 +138,28 @@ $.ajax({
             let wind = data.wind.speed
             let icon = data.weather[0].icon
             let humid = data.main.temp;
-
-            
-
-
-            if (!appendedDates2.includes(today)) {
-                appendedDates2.push(today)
+           let lat = data.coord.lat;
+           let lon = data.coord.lon;
+           let uvURL =`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly&units=imperial&appid=${apiKey}`
+          
+          function getUVidx () { $.ajax({
+            url: uvURL,
+            method: 'GET'
+          }).then(function(data) {
+            //   let appendedData2 =[]
+            console.log(data)
+            // console.log(data.current.uvi);
+           var uvId= data.current.uvi;
+        //    console.log(uvId); its defining here
+          });
+        }
+        getUVidx();
+        var uvId = getUVidx();
+    //    var uvId = getUVidx() 
+     
+    console.log(uvId)
+            if (!appendedData.includes(today)) {
+                appendedData.push(today)
                 let temp = data.main.temp;
                 // let weekday= getDayOfWeek(currDate);
                 
@@ -151,7 +168,7 @@ $.ajax({
 
 
                 $("#current").append(
-                    getPanelHTML2(name, today, temp, wind, humid, icon)
+                    getPanelHTML2(name, today, temp, wind, humid, icon,uvId)
                 )
         // for (let i=0; i<data.list.length; i++){
         //     let curr2= data.list[i]
