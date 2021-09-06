@@ -1,3 +1,8 @@
+*{
+    /* background-color: #50d8d7;
+    background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%); */
+
+}
 h1 {
     display: flex;
     flex-wrap: nowrap;
@@ -12,5 +17,17 @@ h1 {
 background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%);
 padding: 2px;
 margin-bottom: 10px;
+
     
+}
+
+#current{
+    /* background-color: #50d8d7;
+background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%); */
+
+}
+
+#myWeather{
+    /* background-color: #50d8d7;
+background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%); */
 }

@@ -34,7 +34,7 @@ function getPanelHTML(name, updateDate, weekday, temp, wind, humid, icon) {
 
 function getPanelHTML2(name, today, temp, wind, humid, icon,UV) {
     return `
-    <div class = "col-sm-2">
+    <div class = "col-12 col-md-8 col-xl-9">
         <div class= "panel panel-default">
         <div class ="panel-heading">Current Weather</div>
             <div class ="panel-heading">${today}</div>
