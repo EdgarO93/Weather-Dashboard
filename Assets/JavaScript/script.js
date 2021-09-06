@@ -19,9 +19,9 @@ function getPanelHTML(name,updateDate, weekday, temp,wind,humid,icon){
             <div class ="panel-heading">${name}</div>
             <div class = "panel-body">
             <img src=" http://openweathermap.org/img/wn/${icon}@2x.png" /> 
-                <p> Temperature: ${temp} </p>
-                <p> Wind: ${wind} mph</p>
-                <p> Humidity: ${humid} % </p>
+                <p> Average Temperature: ${temp} </p>
+                <p> Wind Speed: ${wind} mph</p>
+                <p> Humidity: ${humid}% </p>
                 <p> uv </p>
             </div>
 
@@ -67,7 +67,7 @@ function searchButtonHandler() {
                         getPanelHTML(name,updateDate,weekday,temp,wind,humid,icon)
                     )
                     appendedCount ++;
-                    if (appendedCount >5){
+                    if (appendedCount >4){
                         break;
                     }
 
