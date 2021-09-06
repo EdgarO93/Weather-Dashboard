@@ -150,8 +150,17 @@ $.ajax({
             console.log(data)
             // console.log(data.current.uvi);
             $('#uvIdx').text(' UV Index: ' +  data.current.uvi);
-        
-        //    console.log(uvId); its defining here
+            
+            if(data.current.uvi <=2){
+                $('#uvIdx').addClass("favorable")
+            }else if(data.current.uvi >2 && data.current.uvi<=5){
+                $('#uvIdx').addClass("moderate")
+            }
+            else if(data.current.uvi >5){
+                $('#uvIdx').addClass("severe")
+            };
+    
+       
           });
         }
         // var uvId = getUVidx();
@@ -173,6 +182,9 @@ $.ajax({
 
               
                 getUVidx();
+
+
+
         // for (let i=0; i<data.list.length; i++){
         //     let curr2= data.list[i]
         //     let UVdat= curr2.daily[0].temp.uvi}
