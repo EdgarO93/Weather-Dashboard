@@ -2,7 +2,7 @@ let $searchButton = $("#searchbtn");
 let $searchInput = $("#searchInput");
 let cityLat;
 let cityLon;
-let UVp= $("#UV");
+// let UVp= $("#UV");
 var uvId;
 
 // function getDayOfWeek(date) {
@@ -142,22 +142,22 @@ $.ajax({
            let lon = data.coord.lon;
            let uvURL =`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly&units=imperial&appid=${apiKey}`
           
-          function getUVidx () { $.ajax({
+           function getUVidx () { $.ajax({
             url: uvURL,
             method: 'GET'
           }).then(function(data) {
             //   let appendedData2 =[]
             console.log(data)
             // console.log(data.current.uvi);
-           var uvId= data.current.uvi;
+            $('#uvIdx').text(' UV Index: ' +  data.current.uvi);
+        
         //    console.log(uvId); its defining here
           });
         }
-        getUVidx();
-        var uvId = getUVidx();
+        // var uvId = getUVidx();
     //    var uvId = getUVidx() 
      
-    console.log(uvId)
+    // console.log(uvId)
             if (!appendedData.includes(today)) {
                 appendedData.push(today)
                 let temp = data.main.temp;
@@ -170,6 +170,9 @@ $.ajax({
                 $("#current").append(
                     getPanelHTML2(name, today, temp, wind, humid, icon,uvId)
                 )
+
+              
+                getUVidx();
         // for (let i=0; i<data.list.length; i++){
         //     let curr2= data.list[i]
         //     let UVdat= curr2.daily[0].temp.uvi}
