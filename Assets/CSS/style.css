@@ -1,14 +1,25 @@
-*{
-    /* background-color: #50d8d7;
-    background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%); */
 
+
+body{
+/* background-color: #91b5d5; */
+background-color: #50d8d7;
+background-image: linear-gradient(90deg, #50d8d7 0%, #923993 79%);
 }
+
 h1 {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
  font-size: 42px;
+ color: azure;
+}
+h2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
  color: azure;
 }
 
