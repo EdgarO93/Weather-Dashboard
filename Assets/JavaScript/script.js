@@ -35,20 +35,19 @@ function getPanelHTML(name, updateDate, weekday, temp, wind, humid, icon) {
 
 function getPanelHTML2(name, today, temp, wind, humid, icon,uvId) {
     return `
-    <div class = "col-12 col-md-8 col-xl-9">
-        <div class= "panel panel-default">
-        <div class ="panel-heading">Current Weather</div>
-            <div class ="panel-heading">${today}</div>
-            <div class ="panel-heading">${name}</div>
-            <div class = "panel-body">
+
+        <div class= "card text-white bg-secondary mb-3" style="width: 18rem;">
+        <h2 class ="card-title">Current Weather</h2>
+            <h3 class ="card-subtitle">${today}</h3>
+            <h4 class ="panel-heading">${name}</h4>
+            <div class = "card-body">
             <img src=" http://openweathermap.org/img/wn/${icon}@2x.png" /> 
                 <p> Temperature: ${temp} </p>
                 <p> Wind Speed: ${wind} mph</p>
                 <p> Humidity: ${humid}% </p>
                 <p id="uvIdx"> UV Index: ${uvId} </p>
             </div>
-
-        </div>
+        
     </div>
     `
 }

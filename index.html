@@ -1,71 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Edgar's Weather Dashboard </title>
-   <!-- links for bootstrap , fontawesome and google fonts -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="Assets/CSS/style.css" />
-    
-  </head>
 
-  <body>
-    <header class="title">
-      <h1> Weather Dashboard </h1>
-    </header>
- <section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Edgar's Weather Dashboard </title>
+  <!-- links for bootstrap , fontawesome and google fonts -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Assets/CSS/style.css" />
+
+</head>
+
+<body>
+  <header class="title">
+    <h1> Weather Dashboard </h1>
+  </header>
+  <section class="d-inline-flex justify-content-around">
+    <div class="d-flex flex-row">
+      <section class="col-12 col-md-4 col-xl-3 bd-sidebar">
         <!--  -->
-        <div class>
-          <!-- adding form here  -->
-        
-            <input type="text" placeholder="Chicago" id="searchInput" />
-            <!-- needs to populate under this  -->
-          </p>
-          <!-- this is the button for submit -->
-          <button
-            type="button"
-            class="btn btn-primary btn-mdn"
-            id="searchbtn"
-          >Search</button>
-        </section>
-      <section>
 
-     
-      </div>
-        <div class="col-md-6 bg-dark text-light" id="current">
+        <!-- adding form here  -->
+
+        <input type="text" placeholder="Chicago" id="searchInput" />
+        <!-- needs to populate under this  -->
+        </p>
+        <!-- this is the button for submit -->
+        <button type="button" class="btn btn-primary btn-mdn" id="searchbtn">Search</button>
+      </section>
+
+      <section class="currentW">
+        <div class="col-12 col-md-8 col-xl-9 mb-3 ml-4 mt-0 pt-0" id="current">
 
         </div>
-      </section> 
-    </section> 
-        <div class="row bg-dark text-light" id="myWeather">
-            
-        <div>
-        </section> 
-        
+
+    </div>
   
+  </section>
+
+  <!-- section for forecast -->
+  </section>
+  <div class="row bg-dark text-light" id="myWeather">
+
+    <div>
+      </section>
+    </div>
+    </section>
 
 
-   
-<!-- links for jquery and momentJS -->
+
+
+    <!-- links for jquery and momentJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./Assets/JavaScript/script.js"></script>
- 
 
-  </body>
+
+</body>
+
 </html>

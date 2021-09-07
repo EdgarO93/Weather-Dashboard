@@ -18,9 +18,15 @@ background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%);
 padding: 2px;
 margin-bottom: 10px;
 
+
     
 }
+/* .currentW{
+    padding-left: 33%;
+    padding-right: 33%;
+    padding-bottom: 30px;
 
+    } */
 #current{
     /* background-color: #50d8d7;
 background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%); */
