@@ -1,11 +1,10 @@
 
-
+/* background color for site */
 body{
-/* background-color: #91b5d5; */
 background-color: #50d8d7;
 background-image: linear-gradient(90deg, #50d8d7 0%, #923993 79%);
 }
-
+/* site title */
 h1 {
     display: flex;
     flex-wrap: nowrap;
@@ -14,6 +13,7 @@ h1 {
  font-size: 42px;
  color: azure;
 }
+/* title of search history */
 h2 {
     display: flex;
     flex-wrap: nowrap;
@@ -23,6 +23,7 @@ h2 {
  color: azure;
 }
 
+/* header color */
 .title{
     background-color: #50d8d7;
 background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%);
@@ -32,23 +33,8 @@ margin-bottom: 10px;
 
     
 }
-/* .currentW{
-    padding-left: 33%;
-    padding-right: 33%;
-    padding-bottom: 30px;
 
-    } */
-#current{
-    /* background-color: #50d8d7;
-background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%); */
-
-}
-
-#myWeather{
-    /* background-color: #50d8d7;
-background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%); */
-}
-
+/* colors for UV Index */
 .severe{
     padding: 1px;
     background-color: red;
