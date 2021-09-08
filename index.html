@@ -19,6 +19,7 @@
   <header class="title">
     <h1> Weather Dashboard </h1>
   </header>
+  <!-- section for the form and current weather -->
   <section class="d-inline-flex justify-content-around">
     <div class="row">
       <section class="col-12 col-sm-4 col-md-4 col-xl-3 bd-sidebar">
@@ -27,34 +28,29 @@
         <!-- adding form here  -->
 
         <input type="text" placeholder="Chicago" id="searchInput" />
-       
+
         </p>
         <!-- this is the button for submit -->
         <button type="button" class="btn btn-primary btn-mdn" id="searchbtn">Search</button>
       </section>
-
+<!-- section that will be appended with the current weather -->
       <section class="currentW">
         <div class="col-sm-4" id="current">
 
         </div>
 
     </div>
-    
-    <section class="d-flex flex-column flex-wrap " id= "searched">
+    <!-- section for the search history button -->
+    <section class="d-flex flex-column flex-wrap " id="searched">
       <h2> Search History </h2>
-      <div class = "d-flex flex-wrap align-self-center col-sm-4 col-md-4" id = "past-search-buttons"></div>
-    </div>
-    <!-- <div class="col-12 col-md-9">
-        <div class = "row border selected-city">
-            <div class = "col-12">
-                <h2 id="searched-city"></h2>
-              </div>
-            </div> -->
+      <div class="d-flex flex-wrap align-self-center col-sm-4 col-md-4" id="past-search-buttons"></div>
+      </div>
+
     </section>
-  
+
   </section>
 
-  <!-- section for forecast -->
+  <!-- section for forecast appending -->
   </section>
   <div class="row text-light" id="myWeather">
 
@@ -62,8 +58,6 @@
       </section>
     </div>
     </section>
-
-
 
 
     <!-- links for jquery and momentJS -->
