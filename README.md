@@ -10,8 +10,8 @@ This Weather Dashboard was created using Javascript, JQuery, and server side API
 Desktop view
 ![plot](Assets/Images/weather6paneldesktop.png)
 Mobile view
-![plot](Assets/images/mobile.jpg)
-![plot](Assets/images/mobile2.jpg)
+![plot](Assets/Images/mobile.jpg)
+![plot](Assets/Images/mobile2.jpg)
 
 
 ## Acknowlegments
