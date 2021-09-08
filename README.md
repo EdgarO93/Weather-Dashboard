@@ -1,18 +1,20 @@
 # Weather-Dashboard
-Weather Outlook for Cities
-User Story
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-Acceptance Criteria
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
+
+Link: https://edgaro93.github.io/Weather-Dashboard/
+
+## Description
+
+This Weather Dashboard was created using Javascript, JQuery, and server side APIs from Open Weather. The dashboard lets you search for cities as well creating a search history and letting you click on it to revisit the weather information.  I was able to pull from multiple APIs to get the current weather, forecast and UV index information. The current weather will give you temperature, wind speed, humidity and UV index. The UV index is color coded depending on good, moderate and severe conditions. I was challenged to get the information with one API call so I did multiple and also with figuring out how to make the buttons work on the search history. I ended up re-writing my code twice over to add similar functions. In future updates, I would like to rewrite my code to make it more efficient. I would also like to add an alert for no city, change the design of the weather and add more information in future updates.
+
+## Screenshot
+Desktop view
+![plot](Assets/Images/weather6paneldesktop.png)
+Mobile view
+![plot](Assets/images/mobile.jpg)
+![plot](Assets/images/mobile2.jpg)
+
+
+## Acknowlegments
+~~~
+I would like to thank my tutor and TAs as well online resources such as W3 schools, MDN Web Docs, and Stack Overflow.
+~~~
