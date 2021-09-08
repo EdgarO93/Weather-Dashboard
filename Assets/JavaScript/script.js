@@ -32,7 +32,7 @@ function getPanelHTML(name, updateDate, weekday, temp, wind, humid, icon) {
 function getPanelHTML2(name, today, temp, wind, humid, icon, uvId) {
   return `
 
-        <div class= "card text-white bg-secondary mb-3" style="width: 18rem;">
+        <div class= "card text-white bg-secondary mb-3 ml-5" style="width: 18rem;">
         <h2 class ="card-title">Current Weather</h2>
             <h3 class ="card-subtitle">${today}</h3>
             <h4 class ="card-heading">${name}</h4>
