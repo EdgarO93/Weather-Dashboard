@@ -13,6 +13,8 @@ Mobile view
 ![plot](Assets/Images/mobile.jpg)
 ![plot](Assets/Images/mobile2.jpg)
 
+## License
+This project is licensed under the terms of the MIT license.
 
 ## Acknowlegments
 ~~~
